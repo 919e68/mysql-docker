@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - ./data:/var/lib/mysql:rw
+      # - ./my.conf:/etc/mysql/conf.d/config-file.cnf
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ABC12abc
+      MYSQL_DATABASE: linkedin_src
+      MYSQL_USER: grist
+      MYSQL_PASSWORD: ABC12abc
+
